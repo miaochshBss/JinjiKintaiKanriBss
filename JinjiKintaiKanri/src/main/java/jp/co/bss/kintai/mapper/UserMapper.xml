@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jp.co.bss.kintai.mapper.UserMapper">
+	<select id="findAll" resultType="jp.co.bss.kintai.dao.User">
+		select * from bss_shain_manage_db.user
+	</select>
+</mapper>
