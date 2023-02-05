@@ -4,4 +4,20 @@
 	<select id="findAll" resultType="jp.co.bss.kintai.dao.User">
 		select * from bss_shain_manage_db.user
 	</select>
+	
+	<select id="findById" resultType="jp.co.bss.kintai.dao.User">
+		select * from bss_shain_manage_db.user where id= #{id}
+	</select>
+	
+	<insert id="create" useGeneratedKeys="true" keyProperty="id">
+		insert into `bss_shain_manage_db`.`user` (`id`, `name`, `address`, `phone`) values (#{id}, #{name}, #{address}, #{phone})
+	</insert>
+	
+	<update id="update">
+		update bss_shain_manage_db.user set name=#{name}, address=#{address}, phone=#{phone} where id= #{id}
+	</update>
+	
+	<delete id="delete">
+		delete from bss_shain_manage_db.user where id = #{id}
+	</delete>
 </mapper>

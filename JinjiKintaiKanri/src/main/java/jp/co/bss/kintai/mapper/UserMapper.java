@@ -16,9 +16,9 @@ import jp.co.bss.kintai.dao.User;
 public interface UserMapper {
 	List<User> findAll();
 	
-	User findOne(Long id);
+	User findById(Long id);
 	
-	void save(User item);
+	void create(User item);
 	
 	void update(User item);
 	
